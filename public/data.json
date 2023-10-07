@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "event_type": "Health Fair",
+    "event_name": "Healthy Living Expo 2023",
+    "date": "2023-05-15",
+    "location": "Convention Center, City Name",
+    "organizer": "Health and Wellness Association",
+    "description": "Explore the latest trends in healthcare, fitness, and nutrition at Healthy Living Expo 2023. Join us for free health screenings, expert talks, and fitness demos.",
+    "image_url": "https://i.ibb.co/FsKCHr3/pixie-1685978849045-1024x682.png"
+  },
+  {
+    "id": 2,
+    "event_type": "Yoga Retreat",
+    "event_name": "Serene Soul Yoga Retreat",
+    "date": "2023-07-20",
+    "location": "Mountain View Retreat Center, Nature Valley",
+    "organizer": "Serene Soul Wellness",
+    "description": "Embark on a journey of self-discovery and relaxation at our Yoga Retreat. Enjoy daily yoga sessions, meditation, healthy meals, and rejuvenating spa treatments.",
+    "image_url": "https://i.ibb.co/1X6PmkP/Group-yoga-class-scaled.jpg"
+  },
+  {
+    "id": 3,
+    "event_type": "Fitness Expo",
+    "event_name": "FitFest 2023",
+    "date": "2023-09-05",
+    "location": "Exhibition Hall, Fitness City",
+    "organizer": "FitLife Events",
+    "description": "FitFest 2023 is the ultimate fitness extravaganza! Experience live workout sessions, fitness challenges, nutrition workshops, and discover the latest fitness gadgets.",
+    "image_url": "https://i.ibb.co/st3wjMJ/fit-fest-2023-0221-orig.jpg"
+  },
+  {
+    "id": 4,
+    "event_type": "Wellness Retreat",
+    "event_name": "Tranquil Retreat: Mind, Body, Spirit",
+    "date": "2023-06-10",
+    "location": "Serenity Resort, Blissful Beach",
+    "organizer": "Tranquil Wellness Retreats",
+    "description": "Nourish your mind, body, and spirit at our Tranquil Retreat. Engage in yoga, meditation, holistic therapies, and mindfulness workshops amidst breathtaking natural surroundings.",
+    "image_url": "https://i.ibb.co/wwkYjp4/1.jpg"
+  },
+  {
+    "id": 5,
+    "event_type": "Health and Fitness Expo",
+    "event_name": "Wellness World Expo 2023",
+    "date": "2023-08-25",
+    "location": "Exhibition Center, Healthville",
+    "organizer": "Global Wellness Network",
+    "description": "Wellness World Expo 2023 brings together leading health and fitness professionals. Explore cutting-edge fitness equipment, attend health seminars, and participate in group workouts.",
+    "image_url": "https://i.ibb.co/yfBRMT7/Dbvwg-H-Uw-AAwb-JO.jpg"
+  },
+  {
+    "id": 6,
+    "event_type": "Yoga and Meditation Workshop",
+    "event_name": "Inner Peace Retreat",
+    "date": "2023-04-30",
+    "location": "Tranquility Yoga Studio, Serene City",
+    "organizer": "Mindful Living Institute",
+    "description": "Discover inner peace through yoga and meditation at our retreat. Learn ancient techniques, enjoy guided meditation, and holistic wellness discussions.",
+    "image_url": "https://i.ibb.co/dg3MhJL/Burren.webp"
+  },
+  {
+    "id": 7,
+    "event_type": "Holistic Health Fair",
+    "event_name": "Harmony Holistic Fair",
+    "date": "2023-10-12",
+    "location": "Wellness Center, Harmony Village",
+    "organizer": "Harmony Holistic Society",
+    "description": "Explore the holistic approach to health at Harmony Holistic Fair. Experience alternative therapies, herbal remedies, energy healing, and mindful living practices.",
+    "image_url": "https://i.ibb.co/HnyRqmZ/1686711684732.png"
+  },
+  {
+    "id": 8,
+    "event_type": "Fitness Bootcamp",
+    "event_name": "Extreme Fit Bootcamp Challenge",
+    "date": "2023-07-08",
+    "location": "Adventure Park, Thrill City",
+    "organizer": "FitExtreme Challenges",
+    "description": "Get ready for the ultimate fitness challenge! Extreme Fit Bootcamp offers high-intensity workouts, obstacle courses, and team challenges for fitness enthusiasts.",
+    "image_url": "https://i.ibb.co/h92mP5p/FBC-DXB-Team-Plank-Hold.jpg"
+  },
+  {
+    "id": 9,
+    "event_type": "Mindfulness and Wellness Expo",
+    "event_name": "ZenLife Expo 2023",
+    "date": "2023-11-18",
+    "location": "Mindful Living Center, Zen City",
+    "organizer": "ZenLife Events",
+    "description": "Immerse yourself in the world of mindfulness at ZenLife Expo 2023. Experience guided meditation sessions, mindful art workshops, and talks by renowned spiritual leaders.",
+    "image_url": "https://i.ibb.co/Q8gVH5S/med-1.webp"
+  },
+  {
+    "id": 10,
+    "event_type": "Outdoor Wellness Retreat",
+    "event_name": "Nature’s Bliss Retreat",
+    "date": "2023-09-30",
+    "location": "Forest Retreat Camp, Tranquil Valley",
+    "organizer": "Nature's Wellness Retreats",
+    "description": "Reconnect with nature and yourself at Nature’s Bliss Retreat. Enjoy hiking, yoga in nature, outdoor meditation, and organic farm-to-table meals.",
+    "image_url": "https://i.ibb.co/4WSZrbt/comoshambala.webp"
+  }
+]
