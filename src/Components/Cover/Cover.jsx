@@ -15,25 +15,25 @@ const Cover = () => {
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
             href="#slide4"
-            className="text-4xl btn btn-ghost bg-none text-basicColor"
+            className="text-4xl btn btn-outline bg-none hover:bg-basicColor hover:border-none text-basicColor"
           >
             ❮
           </a>
-          <a href="#slide2" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide2" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-full text-center p-20 mt-10">
-          <div className="flex-row">
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="flex-row ">
             <h1 className=" font-extrabold text-5xl text-basicColor">
               Discover Wellness: Your Ultimate Guide
             </h1>
             <div className="join mt-10 w-full justify-center">
               <input
-                className="input input-bordered join-item w-6/12"
+                className="input input-bordered join-item w-6/12 border-none"
                 placeholder="Services"
               />
-              <button className="btn bg-basicColor text-white font-bold text-xl focus:outline-none border-none join-item rounded-r-full w-2/12">Find</button>
+              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">Find</button>
             </div>
           </div>
         </div>
@@ -45,15 +45,26 @@ const Cover = () => {
           className="w-full"
         />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide1" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❮
           </a>
-          <a href="#slide3" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide3" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center left-5 right-5 top-1/2">
-          <h1>Hi this is me</h1>
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="flex-row ">
+            <h1 className=" font-extrabold text-5xl text-basicColor">
+              Discover Wellness: Your Ultimate Guide
+            </h1>
+            <div className="join mt-10 w-full justify-center">
+              <input
+                className="input input-bordered join-item w-6/12 border-none"
+                placeholder="Services"
+              />
+              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">Find</button>
+            </div>
+          </div>
         </div>
       </div>
       <div id="slide3" className="carousel-item relative w-full">
@@ -63,15 +74,26 @@ const Cover = () => {
           className="w-full"
         />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide2" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❮
           </a>
-          <a href="#slide4" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide4" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center left-5 right-5 top-1/2">
-          <h1>Hi this is me</h1>
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="flex-row ">
+            <h1 className=" font-extrabold text-5xl text-basicColor">
+              Discover Wellness: Your Ultimate Guide
+            </h1>
+            <div className="join mt-10 w-full justify-center">
+              <input
+                className="input input-bordered join-item w-6/12 border-none"
+                placeholder="Services"
+              />
+              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">Find</button>
+            </div>
+          </div>
         </div>
       </div>
       <div id="slide4" className="carousel-item relative w-full">
@@ -81,15 +103,26 @@ const Cover = () => {
           className="w-full"
         />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide3" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❮
           </a>
-          <a href="#slide1" className="text-4xl btn btn-ghost text-basicColor">
+          <a href="#slide1" className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor">
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center left-5 right-5 top-1/2">
-          <h1>Hi this is me</h1>
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="flex-row ">
+            <h1 className=" font-extrabold text-5xl text-basicColor">
+              Discover Wellness: Your Ultimate Guide
+            </h1>
+            <div className="join mt-10 w-full justify-center">
+              <input
+                className="input input-bordered join-item w-6/12 border-none"
+                placeholder="Services"
+              />
+              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">Find</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
