@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import img1 from "../../../assets/logo.png";
 import "./Header.css";
 import { useContext } from "react";
@@ -7,12 +7,13 @@ import { FcBusinessman } from "react-icons/fc";
 
 const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
-  console.log(user);
+  const navigate = useNavigate();
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
         // Sign-out successful.
         console.log(user);
+        navigate("/");
       })
       .catch((error) => {
         // An error happened.
@@ -37,7 +38,7 @@ const Header = () => {
         {user ? (
           <>
             <li>
-              <NavLink to={"/contacts"}>User Details</NavLink>
+              <NavLink to={"/profile"}>Profile</NavLink>
             </li>
           </>
         ) : (
@@ -88,11 +89,7 @@ const Header = () => {
             className="btn w-12 text-4xl btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-              {user ? (
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              ) : (
-                <FcBusinessman />
-              )}
+              {user ? <img src={user?.photoURL} /> : <FcBusinessman />}
             </div>
           </label>
           {user ? (
