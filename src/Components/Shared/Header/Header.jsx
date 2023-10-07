@@ -1,13 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import img1 from "../../../assets/logo.png";
-import { BsGithub } from "react-icons/bs";
-import { FcGoogle } from "react-icons/fc";
 import "./Header.css";
+import { useContext } from "react";
+import { AuthContext } from "../../../Context/AuthProvider";
+import { FcBusinessman } from "react-icons/fc";
 
 const Header = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+  console.log(user);
+  const handleLogOut = () => {
+    signOutUser()
+      .then(() => {
+        // Sign-out successful.
+        console.log(user);
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  };
   const navData = (
     <>
-      <div id="sidebar" className="flex items-center gap-4">
+      <div id="sidebar" className="flex items-center gap-8">
         <li>
           <NavLink to={"/"}>Home</NavLink>
         </li>
@@ -20,6 +34,15 @@ const Header = () => {
         <li>
           <NavLink to={"/contacts"}>Contact</NavLink>
         </li>
+        {user ? (
+          <>
+            <li>
+              <NavLink to={"/contacts"}>User Details</NavLink>
+            </li>
+          </>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );
@@ -58,24 +81,43 @@ const Header = () => {
 
         <div className="navbar-end">
           <div className="hidden lg:flex pe-10">
-            <ul className="text-white text-lg px-1">
-              {navData}
-            </ul>
+            <ul className="text-white text-lg px-4">{navData}</ul>
           </div>
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <label
+            tabIndex={0}
+            className="btn w-12 text-4xl btn-ghost btn-circle avatar"
+          >
             <div className="w-10 rounded-full">
-              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              {user ? (
+                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              ) : (
+                <FcBusinessman />
+              )}
             </div>
           </label>
-          <a className="btn btn-outline border-none text-xl capitalize ms-2 text-white hover:bg-basicColor">
-            Sign In
-          </a>
-          <button className=" text-3xl text-white me-3">
-            <FcGoogle />
-          </button>
-          <button className=" text-3xl text-black">
-            <BsGithub />
-          </button>
+          {user ? (
+            <button
+              onClick={handleLogOut}
+              className="btn btn-outline border-none text-xl capitalize ms-2 text-white hover:bg-basicColor"
+            >
+              SignOut
+            </button>
+          ) : (
+            <>
+              <Link
+                to={"/login"}
+                className="btn btn-outline border-none text-xl capitalize ms-2 text-white hover:bg-basicColor"
+              >
+                Log In
+              </Link>
+              <Link
+                to={"/register"}
+                className="btn btn-outline border-none text-xl capitalize text-white hover:bg-basicColor"
+              >
+                Register
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
-import React from 'react';
-import cover1 from '../../assets/cover(1).jpeg'
+import cover1 from '../../assets/cover(1).jpg'
 import cover2 from '../../assets/cover(1).jpg'
 import cover3 from '../../assets/cover(2).jpg'
 import cover4 from '../../assets/cover(3).jpg'

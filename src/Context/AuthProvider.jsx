@@ -16,6 +16,13 @@ const AuthProvider = ({ children }) => {
   const auth = getAuth(app);
   const [user, setUsers] = useState(null);
 
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUsers(currentUser);
+    });
+    return () => unSubscribe();
+  }, []);
+
   const createUserWithEmail = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -24,22 +31,21 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const signInWithGoogle=(provider)=>{
-    return signInWithPopup(auth, provider)
-  }
+  const signInWithGoogle = (provider) => {
+    return signInWithPopup(auth, provider);
+  };
 
-  const signOutUser=()=>{
-    return signOut(auth)
-  }
+  const signOutUser = () => {
+    return signOut(auth);
+  };
 
-  useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUsers(currentUser);
-    });
-    return () => unSubscribe();
-  }, [auth]);
-
-  const authInfo = { user, createUserWithEmail, signInWithEmail,signOutUser,signInWithGoogle };
+  const authInfo = {
+    user,
+    createUserWithEmail,
+    signInWithEmail,
+    signOutUser,
+    signInWithGoogle,
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
