@@ -1,12 +1,14 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import img1 from "../../../assets/footer.png";
 import "./Header.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
 import { FcBusinessman } from "react-icons/fc";
+import { split } from "postcss/lib/list";
 
 const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const handleLogOut = () => {
     signOutUser()
@@ -75,10 +77,10 @@ const Header = () => {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-          <a className="normal-case text-xl">
-            <img className="h-12" src={img1} alt="" />
-          </a>
-          <p className="font-bold text-4xl text-white">REZOAN</p>
+            <a className="normal-case text-xl">
+              <img className="h-12" src={img1} alt="" />
+            </a>
+            <p className="font-bold text-4xl text-white">REZOAN</p>
           </div>
         </div>
 
@@ -86,12 +88,23 @@ const Header = () => {
           <div className="hidden lg:flex pe-10">
             <ul className="text-white text-lg px-4">{navData}</ul>
           </div>
+          <div className="px-2 text-center">
+            {
+              user?<p className="truncate text-base font-bold text-white">{user?.displayName}</p>:''
+            }
+          </div>
           <label
             tabIndex={0}
             className="btn w-12 text-4xl btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-              {user ? <img src={user?.photoURL} /> : <FcBusinessman />}
+              {user ? (
+                <>
+                  <img src={user?.photoURL} />
+                </>
+              ) : (
+                <FcBusinessman />
+              )}
             </div>
           </label>
           {user ? (
@@ -105,13 +118,13 @@ const Header = () => {
             <>
               <Link
                 to={"/login"}
-                className="btn btn-outline border-none text-xl capitalize ms-2 text-white hover:bg-basicColor"
+                className="btn btn-outline border-none text-lg capitalize ms-1 text-white hover:bg-basicColor"
               >
                 Log In
               </Link>
               <Link
                 to={"/register"}
-                className="btn btn-outline border-none text-xl capitalize text-white hover:bg-basicColor"
+                className="btn btn-outline border-none text-lg capitalize text-white hover:bg-basicColor"
               >
                 Register
               </Link>

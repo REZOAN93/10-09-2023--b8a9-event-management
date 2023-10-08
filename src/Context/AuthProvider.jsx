@@ -40,6 +40,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true)
     return signInWithPopup(auth, provider);
   };
+
+  const SignInWithGit=(provider)=>{
+    return signInWithPopup(auth, provider)
+  }
+
   const updateUser = (profile) => {
     setLoading(true)
     return updateProfile(auth.currentUser, profile);
@@ -58,7 +63,8 @@ const AuthProvider = ({ children }) => {
     signOutUser,
     signInWithGoogle,
     updateUser,
-    loading
+    loading,
+    SignInWithGit
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

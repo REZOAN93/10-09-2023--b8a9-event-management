@@ -3,18 +3,23 @@ import "./Signin.css";
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
+import Swal from "sweetalert2";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const SignIn = () => {
-  const { signInWithEmail } = useContext(AuthContext);
+  const { signInWithEmail, signInWithGoogle, SignInWithGit } =
+    useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
- 
- 
+  const [showPassword, setshowPassword] = useState(false);
+  const provider = new GoogleAuthProvider();
+  const gitProvider = new GithubAuthProvider();
+
   const handleLogInUser = (event) => {
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
     signInWithEmail(email, password)
@@ -22,6 +27,15 @@ const SignIn = () => {
         // Signed in
         const user = userCredential.user;
         // ...
+        if (user) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "You have successfully LogIn",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -29,8 +43,59 @@ const SignIn = () => {
         setError(errorMessage);
       });
   };
+
+  const handleGoogleLogin = (event) => {
+    event.preventDefault();
+    signInWithGoogle(provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  };
+
+  const handleGithubLogin = (event) => {
+    event.preventDefault();
+    SignInWithGit(gitProvider)
+      .then((result) => {
+        // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+        const credential = GithubAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+
+        // The signed-in user info.
+        const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GithubAuthProvider.credentialFromError(error);
+        // ...
+      });
+  };
   return (
-    <div className="card shadow-2xl bg-base-100 my-10 w-4/12 mx-auto px-10 py-10">
+    <div className="card shadow-2xl bg-base-100 my-5 w-4/12 mx-auto px-10 py-8">
       <h1 className="font-bold text-3xl text-center">Log In</h1>
       <form onSubmit={handleLogInUser} className=" space-y-3">
         <div className="form-control">
@@ -45,12 +110,12 @@ const SignIn = () => {
             required
           />
         </div>
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             name="password"
             placeholder="password"
             className="input input-bordered"
@@ -62,7 +127,14 @@ const SignIn = () => {
               <span className="ms-3">Remember Me</span>
             </p>
           </label>
+          <span
+            onClick={() => setshowPassword(!showPassword)}
+            className=" cursor-pointer absolute right-5 top-12 text-2xl"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
         </div>
+
         <div className="form-control mt-2">
           {error ? (
             <>
@@ -90,14 +162,20 @@ const SignIn = () => {
       <div className="px-10  items-center mb-5">
         <p className="font-bold text-basicColor text-center">Continue with</p>
         <div className="flex gap-5 justify-center">
-          <button className="btn btn-sm capitalize text-base text-white bg-basicColor hover:bg-green-900">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn btn-sm capitalize text-base cursor-pointer text-white bg-basicColor hover:bg-green-900"
+          >
             {" "}
             <span>
               <BsGoogle />
             </span>{" "}
             Google
           </button>
-          <button className="btn btn-sm capitalize text-base text-white bg-basicColor hover:bg-green-900">
+          <button
+            onClick={handleGithubLogin}
+            className="btn btn-sm cursor-pointer capitalize text-base text-white bg-basicColor hover:bg-green-900"
+          >
             {" "}
             <span>
               <BsGithub />

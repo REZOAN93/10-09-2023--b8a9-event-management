@@ -1,13 +1,14 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider";
 import Swal from "sweetalert2";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUserWithEmail,updateUser } = useContext(AuthContext);
+  const { createUserWithEmail, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [error, setError] = useState("");
- 
+  const [showPassword, setshowPassword] = useState(false);
 
   const handleCreateUser = (event) => {
     event.preventDefault();
@@ -15,7 +16,21 @@ const Register = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const photoURl=form.photoURL.value;
+    const photoURl = form.photoURL.value;
+
+    if (password.length < 6) {
+      setError("Password must be six characters long or more");
+      return;
+    }
+    if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      setError("Password should contain at least one Special character");
+      return;
+    }
+    if (!/(?=.*?[A-Z])/.test(password)) {
+      setError("Password should contain at least one Capital character");
+      return;
+    }
+
     createUserWithEmail(email, password)
       .then((userCredential) => {
         // Signed up
@@ -40,28 +55,28 @@ const Register = () => {
         setError(errorMessage);
         // ..
       });
-      const handleUpdateUser = (name, photo) => {
-        const profile = {
-          displayName: name,
-          photoURL: photo,
-        };
-        updateUser(profile)
-          .then(() => {
-            // Profile updated!
-            // ...
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
+    const handleUpdateUser = (name, photo) => {
+      const profile = {
+        displayName: name,
+        photoURL: photo,
       };
+      updateUser(profile)
+        .then(() => {
+          // Profile updated!
+          // ...
+        })
+        .catch((error) => {
+          // An error occurred
+          // ...
+        });
+    };
   };
   return (
-    <div className="card shadow-2xl bg-base-100 my-8 border w-6/12 mx-auto px-10 py-10">
-      <h1 className="font-bold text-3xl mb-2 text-center">
+    <div className="card shadow-2xl bg-base-100 my-5 border w-6/12 mx-auto px-10 py-8">
+      <h1 className="font-bold text-3xl mb-5 text-center">
         Create New Account
       </h1>
-      <form onSubmit={handleCreateUser} className=" space-y-1">
+      <form onSubmit={handleCreateUser} className=" space-y-3">
         <div className="grid grid-cols-3 w-full gap-3">
           <div className="form-control">
             <label className="label">
@@ -72,6 +87,7 @@ const Register = () => {
               placeholder="Enter name"
               name="name"
               className="input input-bordered"
+              required
             />
           </div>
           <div className="form-control col-span-2">
@@ -98,17 +114,23 @@ const Register = () => {
             className="input input-bordered"
           />
         </div>
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="password"
             name="password"
             className="input input-bordered"
             required
           />
+          <span
+            onClick={() => setshowPassword(!showPassword)}
+            className=" cursor-pointer absolute right-5 top-12 text-2xl"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
           <label className="label">
             <p>
               <input type="checkbox" name="remember me" id="" />
