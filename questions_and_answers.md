@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: The correct answer is B: ReferenceError: greetign is not defined.
 
-<i>Write your explanation here</i>
+<i>There is a typo in the code where greetign is used instead of greeting. As a result, a ReferenceError will be thrown because greetign is not defined as a variable. ?</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: The correct answer is C: `"12"`.
 
-<i>Write your explanation here</i>
+<i>In the given code, the function sum is called with the arguments 1 and "2". However, "2" is a string, not a number. When try to add a number and a string in JavaScript, it doesn't work as expected. Instead of adding them, it combines them as a string. So, 1 + "2" results in the string "12". Therefore, the correct answer is C: "12".</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: The correct answer is A: ['🍕', '🍫', '🥑', '🍔']'. ?
 
-<i>Write your explanation here</i>
+<i>In the given code, the info object's favoriteFood property is initially set to "🍕" which is the first element of the food array. However, later in the code, the value of info.favoriteFood is changed to "🍝". This change does not affect the original food array, so when console.log(food) is executed, it still prints the original array ['🍕', '🍫', '🥑', '🍔'].</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: The correct answer is B: Hi there, undefined.
 
-<i>Write your explanation here</i>
+<i>The sayHi function expects a parameter name, but when it is called in console.log(sayHi()), no argument is provided. In JavaScript, when you call a function with missing parameters, those parameters are assigned the value undefined by default. Therefore, the function returns "Hi there, undefined" as name is undefined in this case.</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: The correct answer is C: 3.
 
-<i>Write your explanation here</i>
+<i> The forEach method iterates over the nums array. In JavaScript, 0 is considered falsy, and all other numbers are truthy. Therefore, the condition if (num) evaluates to true for all non-zero numbers (1, 2, and 3). As a result, the count variable is incremented three times, making it 3. Hence, console.log(count) will output 3.</i>
 
 </p>
 </details>
