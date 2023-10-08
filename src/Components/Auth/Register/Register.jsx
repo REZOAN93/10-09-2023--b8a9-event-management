@@ -45,7 +45,7 @@ const Register = () => {
             timer: 1500,
           });
           handleUpdateUser(name, photoURl);
-          navigate("/login");
+          navigate("/");
           form.reset();
         }
       })
