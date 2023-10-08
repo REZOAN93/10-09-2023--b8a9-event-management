@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### Answer: The correct answer is B: ReferenceError: greetign is not defined.
 
-<i>There is a typo in the code where greetign is used instead of greeting. As a result, a ReferenceError will be thrown because greetign is not defined as a variable. ?</i>
+<i>There is a typo in the code where greetign is used instead of greeting. As a result, a ReferenceError will be thrown because greetign is not defined as a variable.</i>
 
 </p>
 </details>

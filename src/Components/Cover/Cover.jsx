@@ -26,7 +26,7 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
             <h1 className=" font-extrabold text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
@@ -63,7 +63,7 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
             <h1 className=" font-extrabold text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
@@ -100,7 +100,7 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
             <h1 className=" font-extrabold text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
@@ -137,7 +137,7 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
             <h1 className=" font-extrabold text-5xl text-basicColor">
               Discover Health and Wellness Events: Your Ultimate Guide
