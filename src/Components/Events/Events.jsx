@@ -1,7 +1,8 @@
 import React from "react";
 import './Events.css'
+import { Link } from "react-router-dom";
 
-const Events = ({ event,handleDetails }) => {
+const Events = ({ event }) => {
   const { id, event_type, event_name, date, location, organizer, image_url } =
     event;
   return (
@@ -16,9 +17,8 @@ const Events = ({ event,handleDetails }) => {
         
         <h2 className=" text-gray-500 text-base">{event_name}</h2>
         <div className="card-actions mt-1">
-          <button onClick={()=>handleDetails(id)} className="btn btn-sm capitalize btn-outline hover:bg-basicColor hover:outline-none hover:border-none border-basicColor text-basicColor text-base ">
-            Ticket & Details
-          </button>
+          <Link to={`/events/${id}`}><button className="btn btn-sm capitalize btn-outline hover:bg-basicColor hover:outline-none hover:border-none border-basicColor text-basicColor text-base "> Ticket & Details
+          </button></Link>
         </div>
       </div>
     </div>

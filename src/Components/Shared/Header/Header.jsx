@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import img1 from "../../../assets/logo.png";
+import img1 from "../../../assets/footer.png";
 import "./Header.css";
 import { useContext } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
@@ -12,7 +12,6 @@ const Header = () => {
     signOutUser()
       .then(() => {
         // Sign-out successful.
-        console.log(user);
         navigate("/");
       })
       .catch((error) => {
@@ -75,9 +74,12 @@ const Header = () => {
               {navData}
             </ul>
           </div>
+          <div className="flex items-center gap-3">
           <a className="normal-case text-xl">
             <img className="h-12" src={img1} alt="" />
           </a>
+          <p className="font-bold text-4xl text-white">REZOAN</p>
+          </div>
         </div>
 
         <div className="navbar-end">

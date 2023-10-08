@@ -8,7 +8,9 @@ import SignIn from "../Components/Auth/Login/SignIn";
 import Register from "../Components/Auth/Register/Register";
 import ErrorPage from "./ErrorPage";
 import Profile from "../Components/Auth/UserProfile/Profile";
-import PrivateRoute from "../../PrivateRoute";
+
+import Details from "../Components/Events/Details";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -19,19 +21,19 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader:()=>fetch('/data.json')
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/services",
-        element: <Services />,
+        element: <PrivateRoute><Services /></PrivateRoute>,
       },
       {
         path: "/blogs",
-        element: <Blogs />,
+        element: <PrivateRoute><Blogs /></PrivateRoute>,
       },
       {
         path: "/contacts",
-        element: <Contact />,
+        element: <PrivateRoute><Contact /></PrivateRoute>,
       },
       {
         path: "/login",
@@ -44,6 +46,15 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/events/:id",
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/data.json"),
       },
     ],
   },

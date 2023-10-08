@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Signin.css";
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
@@ -6,23 +6,23 @@ import { AuthContext } from "../../../Context/AuthProvider";
 
 const SignIn = () => {
   const { signInWithEmail } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
   const [error, setError] = useState("");
+ 
+ 
   const handleLogInUser = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
     signInWithEmail(email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         // ...
-        if (user) {
-          navigate("/");
-        }
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         const errorMessage = error.message;
