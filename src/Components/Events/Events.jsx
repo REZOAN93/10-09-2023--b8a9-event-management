@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Events.css";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PropTypes from 'prop-types';
 
 const Events = ({ event }) => {
-  const { id, event_type, event_name, date, location, organizer, image_url,fee } =event;
+  const { id, event_type, event_name, image_url,fee } =event;
   useEffect(() => {
     AOS.init({
       duration: 1200
@@ -35,5 +36,7 @@ const Events = ({ event }) => {
     </div>
   );
 };
-
+Events.propTypes = {
+  event: PropTypes.array
+}
 export default Events;
