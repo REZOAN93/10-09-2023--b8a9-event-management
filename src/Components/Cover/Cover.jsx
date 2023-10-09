@@ -1,11 +1,19 @@
+import { useEffect } from "react";
 import cover1 from "../../assets/cover(1).jpg";
 import cover2 from "../../assets/cover(1).jpg";
 import cover3 from "../../assets/cover(2).jpg";
 import cover4 from "../../assets/cover(3).jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Cover = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 3000
+     });
+  }, [])
   return (
-    <div className="carousel h-64 lg:h-128">
+    <div data-aos="fade-right" className="carousel h-64 lg:h-128">
       <div id="slide1" className="carousel-item relative w-full">
         <img
           src={cover1}

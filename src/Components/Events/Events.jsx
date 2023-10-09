@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Events.css";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Events = ({ event }) => {
-  const { id, event_type, event_name, date, location, organizer, image_url,fee } =
-    event;
+  const { id, event_type, event_name, date, location, organizer, image_url,fee } =event;
+  useEffect(() => {
+    AOS.init({
+      duration: 1200
+     });
+  }, [])
   return (
-    <div className="flex flex-col">
-      <figure className=" h-56 w-full rounded-lg hover:opacity-30">
-        <img className=" h-56 w-full rounded-lg" src={image_url} alt="Shoes" />
+    <div data-aos="fade-left"  className="flex flex-col">
+      <figure data-aos="zoom-in" className=" h-56 w-full rounded-lg hover:opacity-30">
+        <img  className=" h-56 w-full rounded-lg" src={image_url} alt="Shoes" />
       </figure>
       <div className="flex-grow py-2 ">
         <p className=" text-basicColor font-bold text-lg ">{event_type}</p>
