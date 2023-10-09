@@ -44,10 +44,10 @@ const Profile = () => {
 
 
   return (
-    <div className="w-10/12 border rounded-lg mx-auto grid grid-cols-2 my-10 p-10">
+    <div className="w-10/12 border rounded-lg mx-auto grid grid-cols-1 gap-20 lg:gap-2 lg:grid-cols-2 my-10 p-10">
       <div className="w-full">
         {user?.photoURL ? (
-          <img className=" w-96 h-96 rounded-full" src={user.photoURL} alt="" />
+          <img className=" w-96 lg:h-96 rounded-full" src={user.photoURL} alt="" />
         ) : (
           <FcBusinessman style={{ fontSize: "400px" }} />
         )}

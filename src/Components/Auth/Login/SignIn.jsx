@@ -95,7 +95,7 @@ const SignIn = () => {
       });
   };
   return (
-    <div className="card shadow-2xl bg-base-100 my-5 w-4/12 mx-auto px-10 py-8">
+    <div className="card lg:shadow-2xl bg-base-100 my-5 lg:w-4/12 mx-auto px-10 py-8">
       <h1 className="font-bold text-3xl text-center">Log In</h1>
       <form onSubmit={handleLogInUser} className=" space-y-3">
         <div className="form-control">

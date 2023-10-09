@@ -4,7 +4,7 @@ import img1 from "../../assets/review(3).jpg";
 const About = () => {
   return (
     <div>
-      <div className="grid grid-cols-3 w-10/12 mx-auto my-8 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-10/12 mx-auto my-8 gap-4">
         <div className="h-full">
           <div className="avatar">
             <div className="w-full mask mask-hexagon">
@@ -12,7 +12,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className=" col-span-2 space-y-4">
+        <div className=" lg:col-span-2 space-y-4">
           <h1 className=" text-4xl font-bold">
             This Is Our Space To Introduce Rezoan
           </h1>

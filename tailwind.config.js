@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      height: {
+        128: "500px",
+        130: "600px",
+      },
       colors: {
         basicColor: "rgb(79, 191, 112)",
         bgAll: "var(--Dark-07, #F3F3F3)",
@@ -16,5 +20,5 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui",'flowbite/plugin')],
+  plugins: [require("daisyui", "flowbite/plugin")],
 };

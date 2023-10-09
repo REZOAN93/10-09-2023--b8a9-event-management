@@ -5,14 +5,13 @@ import cover4 from "../../assets/cover(3).jpg";
 
 const Cover = () => {
   return (
-    <div style={{ height: "500px" }} className="carousel">
+    <div className="carousel h-64 lg:h-128">
       <div id="slide1" className="carousel-item relative w-full">
         <img
-          style={{ height: "500px", opacity: 0.3 }}
           src={cover1}
-          className=" w-full"
+          className=" w-full h-64 lg:h-128 opacity-30"
         />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-56 lg:top-1/2">
           <a
             href="#slide4"
             className="text-4xl btn btn-outline bg-none hover:bg-basicColor hover:border-none text-basicColor"
@@ -26,17 +25,17 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
+        <div className="absolute flex justify-center lg:w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
-            <h1 className=" font-extrabold text-5xl text-basicColor">
+            <h1 className=" font-extrabold text-2xl mt-5 lg:text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
             </h1>
-            <div className="join mt-10 w-full justify-center">
+            <div className="join mt-3 lg:mt-10 w-full justify-center">
               <input
                 className="input input-bordered join-item w-6/12 border-none"
                 placeholder="Services"
               />
-              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
+              <button className="btn bg-basicColor capitalize text-white font-bold text-lg lg:text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
                 Find
               </button>
             </div>
@@ -45,11 +44,10 @@ const Cover = () => {
       </div>
       <div id="slide2" className="carousel-item relative w-full">
         <img
-          style={{ height: "500px", opacity: 0.3 }}
           src={cover3}
-          className="w-full"
+          className="w-full h-64 lg:h-128 opacity-30"
         />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-56 lg:top-1/2">
           <a
             href="#slide1"
             className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -63,17 +61,17 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
+        <div className="absolute flex justify-center lg:w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
-            <h1 className=" font-extrabold text-5xl text-basicColor">
+            <h1 className=" font-extrabold text-2xl mt-5 lg:text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
             </h1>
-            <div className="join mt-10 w-full justify-center">
+            <div className="join mt-3 lg:mt-10 w-full justify-center">
               <input
                 className="input input-bordered join-item w-6/12 border-none"
                 placeholder="Services"
               />
-              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
+              <button className="btn bg-basicColor capitalize text-white font-bold text-lg lg:text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
                 Find
               </button>
             </div>
@@ -82,11 +80,10 @@ const Cover = () => {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <img
-          style={{ height: "500px", opacity: 0.3 }}
           src={cover2}
-          className="w-full"
+          className="w-full h-64 lg:h-128 opacity-30"
         />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-56 lg:top-1/2">
           <a
             href="#slide2"
             className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -100,17 +97,17 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
+        <div className="absolute flex justify-center lg:w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
-            <h1 className=" font-extrabold text-5xl text-basicColor">
+            <h1 className=" font-extrabold text-2xl mt-5 lg:text-5xl text-basicColor">
             Discover Health and Wellness Events: Your Ultimate Guide
             </h1>
-            <div className="join mt-10 w-full justify-center">
+            <div className="join mt-3 lg:mt-10 w-full justify-center">
               <input
                 className="input input-bordered join-item w-6/12 border-none"
                 placeholder="Services"
               />
-              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
+              <button className="btn bg-basicColor capitalize text-white font-bold text-lg lg:text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
                 Find
               </button>
             </div>
@@ -119,11 +116,10 @@ const Cover = () => {
       </div>
       <div id="slide4" className="carousel-item relative w-full">
         <img
-          style={{ height: "500px", opacity: 0.3 }}
           src={cover4}
-          className="w-full"
+          className="w-full h-64 lg:h-128 opacity-30"
         />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-56 lg:top-1/2">
           <a
             href="#slide3"
             className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -137,17 +133,17 @@ const Cover = () => {
             ❯
           </a>
         </div>
-        <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-48">
+        <div className="absolute flex justify-center lg:w-8/12 text-center lg:top-36 lg:left-48">
           <div className="flex-row ">
-            <h1 className=" font-extrabold text-5xl text-basicColor">
-              Discover Health and Wellness Events: Your Ultimate Guide
+            <h1 className=" font-extrabold text-2xl mt-5 lg:text-5xl text-basicColor">
+            Discover Health and Wellness Events: Your Ultimate Guide
             </h1>
-            <div className="join mt-10 w-full justify-center">
+            <div className="join mt-3 lg:mt-10 w-full justify-center">
               <input
                 className="input input-bordered join-item w-6/12 border-none"
                 placeholder="Services"
               />
-              <button className="btn bg-basicColor text-white font-bold text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
+              <button className="btn bg-basicColor capitalize text-white font-bold text-lg lg:text-xl border-none focus:outline-none join-item rounded-r-full w-2/12">
                 Find
               </button>
             </div>

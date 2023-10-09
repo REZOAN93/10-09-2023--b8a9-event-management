@@ -72,12 +72,12 @@ const Register = () => {
     };
   };
   return (
-    <div className="card shadow-2xl bg-base-100 my-5 border w-6/12 mx-auto px-10 py-8">
+    <div className="card lg:shadow-2xl bg-base-100 my-5 lg:w-6/12 mx-auto px-10 py-8">
       <h1 className="font-bold text-3xl mb-5 text-center">
         Create New Account
       </h1>
       <form onSubmit={handleCreateUser} className=" space-y-3">
-        <div className="grid grid-cols-3 w-full gap-3">
+        <div className="grid lg:grid-cols-3 w-full gap-3">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -90,7 +90,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control col-span-2">
+          <div className="form-control lg:col-span-2">
             <label className="label">
               <span className="label-text">Email</span>
             </label>

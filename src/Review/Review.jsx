@@ -7,15 +7,15 @@ import img4 from "../assets/review(4).jpg";
 const Review = () => {
   return (
     <div>
-      <div style={{ height: "500px" }} className="carousel">
+      <div className="carousel lg:h-128">
         <div id="slide5" className="carousel-item relative w-full">
-          <img style={{ opacity: 0.3 }} src={img1} className=" w-full" />
+          <img style={{ opacity: 0.3 }} src={img1} className=" w-full h-128" />
           <div className=" absolute w-full">
             <figure className="flex justify-center">
-              <img className="h-28 flex" src={success} alt="" />
+              <img className=" h-16 lg:h-28 flex" src={success} alt="" />
             </figure>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1 lg:top-1/2">
             <a
               href="#slide8"
               className="text-4xl btn btn-outline bg-none hover:bg-basicColor hover:border-none text-basicColor"
@@ -29,15 +29,15 @@ const Review = () => {
               ❯
             </a>
           </div>
-          <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="absolute flex justify-center p-3 lg:w-8/12 lg:text-center top-16 lg:top-36 lg:left-44">
             <div className="flex-row space-y-3">
-              <h1 className=" font-extrabold text-5xl text-basicColor">
+              <h1 className=" font-extrabold text-xl lg:text-5xl text-basicColor">
                 Health Fair
               </h1>
-              <h1 className=" text-4xl text-basicColor font-bold">
+              <h1 className=" text-xl lg:text-4xl text-basicColor font-bold">
                 Customer: ABC Healthcare Center
               </h1>
-              <p className=" text-lg text-justify text-gray-600">
+              <p className=" text-base lg:text-lg text-justify text-gray-600">
                 ABC Healthcare Center participated in the Health Fair organized
                 by the local community. They offered free health check-ups and
                 consultations. The event was a tremendous success, reaching over
@@ -49,13 +49,13 @@ const Review = () => {
           </div>
         </div>
         <div id="slide6" className="carousel-item relative w-full">
-          <img style={{ opacity: 0.3 }} src={img2} className="w-full" />
+          <img style={{ opacity: 0.3 }} src={img2} className="w-full h-128" />
           <div className=" absolute w-full">
             <figure className="flex justify-center">
-              <img className="h-28 flex" src={success} alt="" />
+              <img className="h-16 lg:h-28" src={success} alt="" />
             </figure>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1 lg:top-1/2">
             <a
               href="#slide5"
               className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -69,15 +69,15 @@ const Review = () => {
               ❯
             </a>
           </div>
-          <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="absolute flex justify-center p-3 lg:w-8/12 lg:text-center top-16 lg:top-36 lg:left-44">
             <div className="flex-row space-y-3">
-              <h1 className=" font-extrabold text-5xl text-basicColor">
+              <h1 className=" font-extrabold text-xl lg:text-5xl text-basicColor">
                 Yoga and Fitness Retreat
               </h1>
-              <h1 className=" text-4xl text-basicColor font-bold">
+              <h1 className=" text-xl lg:text-4xl text-basicColor font-bold">
                 Customer: Zen Yoga Studio
               </h1>
-              <p className=" text-lg text-justify text-gray-600">
+              <p className=" text-base lg:text-lg text-justify text-gray-600">
                 Zen Yoga Studio organized a rejuvenating Yoga and Fitness
                 Retreat in a serene countryside location. Participants enjoyed a
                 weekend of yoga sessions, meditation, and outdoor activities.
@@ -90,13 +90,13 @@ const Review = () => {
           </div>
         </div>
         <div id="slide7" className="carousel-item relative w-full">
-          <img style={{ opacity: 0.3 }} src={img3} className="w-full" />
+          <img style={{ opacity: 0.3 }} src={img3} className="w-full h-128" />
           <div className=" absolute w-full">
             <figure className="flex justify-center">
-              <img className="h-28 flex" src={success} alt="" />
+              <img className="h-16 lg:h-28 flex" src={success} alt="" />
             </figure>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1 lg:top-1/2">
             <a
               href="#slide6"
               className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -110,15 +110,15 @@ const Review = () => {
               ❯
             </a>
           </div>
-          <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="absolute flex justify-center p-3 lg:w-8/12 lg:text-center top-16 lg:top-36 lg:left-44">
             <div className="flex-row space-y-3">
-              <h1 className=" font-extrabold text-5xl text-basicColor">
+              <h1 className=" font-extrabold text-xl lg:text-5xl text-basicColor">
                 Wellness Expo
               </h1>
-              <h1 className=" text-4xl text-basicColor font-bold">
+              <h1 className=" text-xl lg:text-4xl text-basicColor font-bold">
                 Customer: Healthy Living Hub
               </h1>
-              <p className=" text-lg text-justify text-gray-600">
+              <p className=" text-base lg:text-lg text-justify text-gray-600">
                 Healthy Living Hub sponsored a Wellness Expo in collaboration
                 with local fitness experts and nutritionists. They showcased a
                 wide range of health and wellness products. The expo attracted
@@ -132,13 +132,13 @@ const Review = () => {
           </div>
         </div>
         <div id="slide8" className="carousel-item relative w-full">
-          <img style={{ opacity: 0.5 }} src={img4} className="w-full" />
+          <img style={{ opacity: 0.5 }} src={img4} className="w-full h-128" />
           <div className=" absolute w-full">
             <figure className="flex justify-center">
-              <img className="h-28 flex" src={success} alt="" />
+              <img className="h-16 lg:h-28 flex" src={success} alt="" />
             </figure>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 bottom-1 lg:top-1/2">
             <a
               href="#slide7"
               className="text-4xl btn btn-outline hover:bg-basicColor hover:border-none text-basicColor"
@@ -152,15 +152,15 @@ const Review = () => {
               ❯
             </a>
           </div>
-          <div className="absolute flex justify-center w-8/12 text-center lg:top-36 lg:left-44">
+          <div className="absolute flex justify-center p-3 lg:w-8/12 lg:text-center top-16 lg:top-36 lg:left-44">
             <div className="flex-row space-y-3">
-              <h1 className=" font-extrabold text-5xl text-basicColor">
+              <h1 className=" font-extrabold text-xl lg:text-5xl text-basicColor">
                 Fitness Bootcamp
               </h1>
-              <h1 className=" text-4xl text-basicColor font-bold">
+              <h1 className=" text-xl lg:text-4xl text-basicColor font-bold">
                 Customer: FitLife Gym
               </h1>
-              <p className=" text-lg text-justify text-gray-600">
+              <p className=" text-base lg:text-lg text-justify text-gray-600">
                 FitLife Gym organized an intensive Fitness Bootcamp over a
                 month, focusing on high-intensity workouts and personalized
                 training. Participants experienced significant fitness
