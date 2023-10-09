@@ -1,4 +1,11 @@
-# Event-Management
+
+# REZOAN "Health and Wellness Events"
+
+## Click here for the Live Link: [https://classroom.github.com/a/ehOGNGkI](https://classroom.github.com/a/ehOGNGkI)
+
+-------------------------------------------------------------------------------------
+
+## : Feature & functionalities of this website:
 
 ###### 1. User Authentication:
 
