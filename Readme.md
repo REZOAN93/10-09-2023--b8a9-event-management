@@ -2,7 +2,9 @@
 
 ## Click here for the Live Link: [https://b8a9-assingment-rezoan.web.app](https://b8a9-assingment-rezoan.web.app)
 
----
+------------------------------------------------------------------
+- Technologies Used Front End: JavaScript, React, Vite, Tailwind CSS
+------------------------------------------------------------------
 
 ## : Feature & functionalities of this website:
 
